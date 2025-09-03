@@ -1,0 +1,60 @@
+.subbanner {
+    width: 800px;
+    padding: 50px 30px;
+    border-radius: 20px;
+}
+
+.subcontent h4 {
+    font-size: 27px;
+    font-weight: 600;
+
+}
+
+.subcontent p {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 0px;
+}
+
+@media (width < 1400px) {
+
+    .subbanner {
+        width: 650px;
+    }
+
+    .subbanner h4 {
+        font-size: 22px;
+    }
+
+    .subcontent p {
+        font-size: 16px;
+    }
+
+    .subcontent button h6 {
+        font-size: 16px !important;
+    }
+
+}
+
+@media (width < 1200px) {
+
+    .subbanner {
+        width: 565px;
+        padding: 30px;
+    }
+
+    .subcontent button h6 {
+        font-size: 15px !important;
+    }
+
+
+
+}
+
+@media (width < 992px) {
+
+    .subbanner{
+        width: 100%;
+    }
+    
+}
