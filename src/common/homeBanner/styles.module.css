@@ -1,0 +1,78 @@
+.consultationBox {
+  background: #6FA1BB;
+  border-radius: 12px;
+}
+
+
+.container{
+    height: 90vh;
+}
+
+.tickIcon{
+    background-color: #21a179;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    width: 22px;
+    height:22px;
+    display: flex;
+    font-size: 14px;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media (max-width: 1400px) {
+  .consultationBox {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .consultationBox {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    height: 70vh;
+    padding: 1rem;
+  }
+  .consultationBox {
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: auto; 
+    padding: 1rem;
+  }
+  .consultationBox {
+    padding: 1rem;
+    text-align: center;
+  }
+  .tickIcon {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .consultationBox {
+    padding: 0.8rem;
+    border-radius: 8px;
+  }
+  .tickIcon {
+    min-width: 20px;
+    min-height: 18px;
+    font-size: 11px;
+  }
+  .container ul li{
+    font-size: 17px !important;
+  }
+}

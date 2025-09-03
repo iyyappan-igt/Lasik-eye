@@ -1,0 +1,29 @@
+.button {
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.button h6 {
+    font-size: 18px;
+    margin: 0px;
+}
+
+.button svg {
+    width: 20px;
+}
+
+.button:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.button2{
+    padding: 15px;
+}
+
+@media( max-width:992px){
+    .button2{
+        margin-top: 30px;
+    }
+}

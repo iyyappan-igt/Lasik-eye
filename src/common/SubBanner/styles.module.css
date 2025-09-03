@@ -1,0 +1,84 @@
+.subbanner {
+    width: 100%;
+    padding: 50px 30px;
+    border-radius: 20px;
+}
+
+.subcontent h4 {
+    font-size: 27px;
+    font-weight: 600;
+
+}
+
+.subcontent p {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 0px;
+}
+
+
+@media (max-width: 1400px) {
+  .subbanner {
+    max-width: 900px;
+    padding: 45px 25px;
+  }
+  .subcontent h4 {
+    font-size: 26px;
+  }
+  .subcontent p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .subbanner {
+    width: 100%;
+    padding: 40px 25px;
+  }
+  .subcontent h4 {
+    font-size: 25px;
+  }
+  .subcontent p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 992px) {
+  .subbanner {
+    max-width: 100%;
+    padding: 35px 20px;
+  }
+  .subcontent h4 {
+    font-size: 24px;
+  }
+  .subcontent p {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .subbanner {
+    width: 100%;
+    padding: 30px 20px;
+  }
+  .subcontent h4 {
+    font-size: 22px;
+  }
+  .subcontent p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .subbanner {
+    max-width: 100%;
+    padding: 25px 15px;
+  }
+  .subcontent h4 {
+    font-size: 20px;
+  }
+  .subcontent p {
+    font-size: 14px;
+  }
+}
