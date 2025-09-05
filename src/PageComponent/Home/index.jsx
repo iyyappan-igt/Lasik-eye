@@ -18,13 +18,10 @@ import styles from "./styles.module.css";
 
 const HomePageComponent = () => {
   const [open, setOpen] = useState(false);
-  const [formTitle, setFormTitle] = useState({title:"",subtitle:""}); // Store the form title
-
-  // Modified handleTogglecontactForm to accept a title
+  const [formTitle, setFormTitle] = useState({title:"",subtitle:""}); 
   const handleTogglecontactForm = (title,subtitle) => {
-    console.log("Toggle fired with title:", title);
-    setFormTitle({title:title,subtitle:subtitle}); // Set the title for the form
-    setOpen(!open); // Toggle popup
+    setFormTitle({title:title,subtitle:subtitle});
+    setOpen(!open); p
   };
 
   return (
