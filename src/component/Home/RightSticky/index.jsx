@@ -9,7 +9,6 @@ const RightSticky = () => {
   const [formData, setFormData] = useState({
     PatientName: "",
     MobileNumber: "",
-    Reason: "General Eye Check-up",
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);

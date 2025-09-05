@@ -3,10 +3,10 @@ import styles from "./styles.module.css"
 
 const HomeBanner = ({ data,statsData }) => {
     return (
-        <div className="container-fluid" style={{ backgroundColor: '#f0fcff' }}>
-            <div className={`${styles.container} d-flex justify-content-center align-items-center w-100 py-lg-2 py-lg-5`}>
-                <div className="w-100 d-flex py-2 gap-5 align-items-start flex-column flex-lg-row">
-                    <div className="d-flex w-100 justify-content-start flex-column mb-4 mb-md-0">
+        <div className="containermd--fluid" style={{ backgroundColor: '#f0fcff' }}>
+            <div className={`${styles.container} d-flex justify-content-center align-items-end w-100`}>
+                <div className="w-100 d-flex gap-5 align-items-end flex-column flex-lg-row">
+                    <div className="d-flex w-100 justify-content-end pb-4 flex-column mb-4 px-4 px-md-0 mb-md-0">
                         <h1 className={`fw-bold fs-1 ${styles.title}`}>
                             {data?.title}
                         </h1>
@@ -40,29 +40,28 @@ const HomeBanner = ({ data,statsData }) => {
                     </div>
 
                     <div className="mt-0 w-100 d-flex justify-content-center">
-                        <div className={styles.imgContainer}
+                        {/* <div className={styles.imgContainer}
                             style={{
                                 borderRadius: '25px',
                                 overflow: 'hidden', 
-                                boxShadow: '0 8px 25px rgba(0, 0, 0, 0.12)',
+                                // boxShadow: '0 8px 25px rgba(0, 0, 0, 0.12)',
                                 position: 'relative',
                             }}
-                        >
-                            <img
-                                src="/assets/bannerImage1.jpg"
+                        > */}
+                            <Image
+                                src="/assets/bannerImage1.png"
                                 alt="Banner"
+                                width={600}
+                                height={540}
                                 style={{
-                                    width: '100%',
-                                    height: '100%',
                                     objectFit: 'cover',
                                     display: 'block',
-                                    transform:"scale(1.1)",
-                                    position: 'absolute',
                                     top: '0',
                                     left: '0',
                                 }}
+                                className={styles.bannerimage}
                             />
-                        </div>
+                        {/* </div> */}
                     </div>
                 </div>
             </div>

@@ -2,7 +2,7 @@ export const HomeData = {
   banner: {
     title: "Best LASIK Eye Surgery in Hyderabad",
     highlights: [
-      "Expert LASIK Surgeons with 10+ Years Experience",
+      "Expert LASIK Surgeons with 15+ Years Experience",
       "Crystal Clear Vision in Just 15 Minutes!",
       "Blade-Free, Painless, and 100% Safe",
       "Affordable EMI Options – See Now, Pay Later",
@@ -36,7 +36,7 @@ export const HomeData = {
     buttontxt: "Calculate Surgery Cost",
   },
   risks: {
-    title: "Risks of Delay in Cataract Surgery",
+    title: "Risks of not getting Lasik",
     riskList: [
       {
         title: "Rising Cost of Glasses & Contact Lenses",

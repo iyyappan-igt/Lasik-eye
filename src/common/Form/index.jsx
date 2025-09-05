@@ -5,14 +5,10 @@ import { useRouter } from "next/router";
 
 const Form = ({ handleTogglecontactForm, title }) => {
   const router = useRouter();
-  console.log(title)
-  const reason = `${title?.title || title || ""} ${title?.subtitle || ""}`.trim().replace(/\+/g, " ");
-
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     PatientName: "",
     MobileNumber: "",
-    Reason: reason,
   });
   const [error, setError] = useState("");
   const handleChange = (e) => {

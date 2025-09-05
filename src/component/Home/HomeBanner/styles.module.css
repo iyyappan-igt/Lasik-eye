@@ -5,7 +5,7 @@
 
 .container {
   min-height: 90vh;
-  padding: 2rem 3rem;
+  padding: 2.5rem 3rem 0rem;
 }
 .imgContainer {
   width: 90%;
@@ -88,7 +88,8 @@
 
 @media (max-width: 1400px) {
   .container {
-    padding: 2rem 3rem;
+    min-height: 65vh;
+    padding: 2.5rem 3rem 0rem;
   }
   .imgContainer {
     height: 450px;
@@ -106,7 +107,7 @@
 
 @media (max-width: 1200px) {
   .container {
-    padding: 1rem 3rem;
+    padding: 1.5rem 1rem 0;
   }
   .imgContainer {
     height: 450px;
@@ -120,12 +121,15 @@
   .statText {
     font-size: 0.9rem;
   }
+  .bannerimage{
+    width: 100%;
+  }
 }
 
 @media (max-width: 992px) {
   .container {
     min-height: 550px;
-    padding: 2rem 2rem;
+    padding: 3rem 2rem 0;
   }
   .imgContainer {
     width: 100%;
@@ -160,7 +164,7 @@
 @media (max-width: 768px) {
   .container {
     height: auto;
-    padding: 2rem 1.5rem;
+    padding: 3rem 0rem 0;
   }
   .title {
     width: 90%;
@@ -192,7 +196,7 @@
 
 @media (max-width: 576px) {
   .container {
-    padding: 2rem 0.6rem;
+    padding: 2.5rem 0rem 0;
   }
   .title {
     width: 100%;

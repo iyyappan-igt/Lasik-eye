@@ -5,9 +5,7 @@ import { useRouter } from "next/router";
 
 const Thankyou = () => {
     const router = useRouter();
-    const handleNavigate=()=>{
-        router.push("/")
-    }
+
     return (
         <section className={`${styles.container} d-flex justify-content-center align-items-center flex-column`}>
             <Image src="/assets/check.png" alt="" width={120} height={120} className={styles.image}/>
@@ -34,8 +32,8 @@ const Thankyou = () => {
                 </ul>
             </div>
             <div className="mt-4">
-                <Button handleTogglecontactForm
-                ={handleNavigate} isbtn3={true} name="Back to Home" bgcolor="#cf873d" txtcolor="#fff" isicon={true} icon={"arrow-right"} iconcolor={"#fff"} />
+                <Button href="https://www.pixeleyehospitals.com/"
+               isbtn3={true} name="Back to Home" bgcolor="#cf873d" txtcolor="#fff" isicon={true} icon={"arrow-right"} iconcolor={"#fff"} />
             </div>
         </section>
     );
