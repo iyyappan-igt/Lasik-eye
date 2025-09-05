@@ -49,7 +49,7 @@ const HomeBanner = ({ data,statsData }) => {
                             }}
                         >
                             <img
-                                src="/assets/bannerImage1.JPG"
+                                src="/assets/bannerImage1.jpg"
                                 alt="Banner"
                                 style={{
                                     width: '100%',
