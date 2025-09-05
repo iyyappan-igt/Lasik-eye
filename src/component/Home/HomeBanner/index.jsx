@@ -3,7 +3,7 @@ import styles from "./styles.module.css"
 
 const HomeBanner = ({ data,statsData }) => {
     return (
-        <div className="container-md-fluid" style={{ backgroundColor: '#f0fcff' }}>
+        <div className="container-md-fluid d-flex justify-content-center" style={{ backgroundColor: '#f0fcff' }}>
             <div className={`${styles.container} d-flex justify-content-center align-items-end w-100`}>
                 <div className="w-100 d-flex gap-5 align-items-end flex-column flex-lg-row">
                     <div className="d-flex w-100 justify-content-end pb-4 flex-column mb-4 px-4 px-md-0 mb-md-0">
@@ -25,7 +25,7 @@ const HomeBanner = ({ data,statsData }) => {
                                 {statsData?.map((item, index) => (
                                     <div
                                         key={index}
-                                        className={`${index == data.length - 1 ? "mb-0" : "mb-4"} d-flex flex-column gap-0 my-lg-1  flex-fill ${styles.statItem}`}
+                                        className={`${index == item.length - 1 ? "mb-0" : "mb-4"} d-flex flex-column gap-0 my-lg-1  flex-fill ${styles.statItem}`}
                                     >
                                         <h2 className="fw-bold fs-2" style={{ color: item.color }}>
                                             {item?.value}
@@ -40,14 +40,6 @@ const HomeBanner = ({ data,statsData }) => {
                     </div>
 
                     <div className="mt-0 w-100 d-flex justify-content-center">
-                        {/* <div className={styles.imgContainer}
-                            style={{
-                                borderRadius: '25px',
-                                overflow: 'hidden', 
-                                // boxShadow: '0 8px 25px rgba(0, 0, 0, 0.12)',
-                                position: 'relative',
-                            }}
-                        > */}
                             <Image
                                 src="/assets/bannerImage1.png"
                                 alt="Banner"
@@ -61,7 +53,6 @@ const HomeBanner = ({ data,statsData }) => {
                                 }}
                                 className={styles.bannerimage}
                             />
-                        {/* </div> */}
                     </div>
                 </div>
             </div>

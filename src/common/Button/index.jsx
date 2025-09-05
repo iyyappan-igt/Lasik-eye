@@ -30,16 +30,20 @@ const Button = ({
         style={{ backgroundColor: bgcolor, color: txtcolor }}
         disabled={disabled}
       >
-        {isicon && <DynamicIcon name={icon} color={iconcolor} />}
-        {isimg && imgicon && (
-          <Image src={imgicon} width={20} height={20} alt={`${name}-icon`} />
-        )}
-        {name && <h6 className="m-0">{name}</h6>}
+        {isbtn3 ? <>{name && <h6 className="m-0">{name}</h6>} {isicon && <DynamicIcon name={icon} color={iconcolor} />}
+          {isimg && imgicon && (
+            <Image src={imgicon} width={20} height={20} alt={`${name}-icon`} />
+          )}
+          </> : <> {isicon && <DynamicIcon name={icon} color={iconcolor} />}
+          {isimg && imgicon && (
+            <Image src={imgicon} width={20} height={20} alt={`${name}-icon`} />
+          )}
+          {name && <h6 className="m-0">{name}</h6>}</>}
       </button>
     </a>
   ) : isbtn3 ? (
     <button
-      className={`btn text-center d-flex align-items-center justify-content-center gap-2 ${styles.button}`}
+      className={`btn text-center d-flex align-items-center justify-cont ent-center gap-2 ${styles.button}`}
       onClick={handleTogglecontactForm}
       style={{ backgroundColor: bgcolor, color: txtcolor }}
       disabled={disabled}
