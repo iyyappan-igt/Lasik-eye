@@ -7,7 +7,10 @@ export const Popup = ({ children, open, onClose }) => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-        onClose();
+        console.log("onClose type:", typeof onClose);
+        if (typeof onClose === "function") {
+          onClose();
+        }
       }
     };
     if (open) {

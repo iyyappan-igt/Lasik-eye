@@ -11,7 +11,8 @@
 }
 
 .doctorImage{
-  min-width: 100px;
+  min-width:85px;
+  width: 100px;
   height:100px;
   object-fit: cover;
   object-position: top;
@@ -103,6 +104,13 @@
 @media (max-width:420px){
     .card .doctorImage{
     width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width:390px){
+    .card .doctorImage{
+    width: 70px;
     height: 80px;
   }
 }

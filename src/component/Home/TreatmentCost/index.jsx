@@ -36,6 +36,7 @@ const TreatmentCost = ({ treatmentlist, handleTogglecontactForm }) => {
           txtcolor={"#fff"}
           bgcolor={"#21a179"}
           isimg={true}
+           href={"https://wa.me/917075008561"}
           imgicon={"/assets/whatsapp.png"}
         />
       </div>
@@ -54,6 +55,10 @@ const TreatmentCost = ({ treatmentlist, handleTogglecontactForm }) => {
         btn_txtcolor={"#fff"}
         isicons={false}
         isimg={false}
+         img={"/assets/checkInsurance.png"}
+          imgheight={250}
+          imgwidth={250}
+          scale={1.2}
         handleTogglecontactForm={handleTogglecontactForm}
       />
 
@@ -67,9 +72,14 @@ const TreatmentCost = ({ treatmentlist, handleTogglecontactForm }) => {
         btn_bgcolor={"#cf873d"}
         btn_name={"Call Advisor Now"}
         btn_txtcolor={"#fff"}
-        isicons={false}
-        isimg={true}
-        btn_img={"/assets/whatsapp.png"}
+        isicons={true}
+        icon_name={"phone"}
+        // btn_img={"/assets/whatsapp.png"}
+        href={"tel:+917075008561"}
+         img={"/assets/healthAdvisor.png"}
+          imgheight={250}
+          imgwidth={250}
+          scale={1.4}
         handleTogglecontactForm={handleTogglecontactForm}
       />
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
-import Button from "../button";
+import Button from "../Button";
 
 const DoctorCard = ({ name, destination, experience, reviews, img, data , handleTogglecontactForm }) => {
     return (
@@ -15,7 +15,7 @@ const DoctorCard = ({ name, destination, experience, reviews, img, data , handle
                     <h5 className="mb-1 fw-bold">{name}</h5>
                     <p className={`mb-2 text-muted ${styles.destination}`}>{destination}</p>
 
-                    <div className="d-flex align-items-center">
+                    <div className="d-flex align-items-start">
                         <div className="me-3 d-flex flex-column align-items-start border-end pe-3">
 
                             <div className="d-flex  align-items-center justify-content-start" style={{gap:"8px"}}>
@@ -35,7 +35,7 @@ const DoctorCard = ({ name, destination, experience, reviews, img, data , handle
                 </div>
             </div>
             <div className={`d-flex justify-content-start ${styles.consultbtn}`}> 
-                <Button name={"Book Free Consultation"} isicon={true} txtcolor={"#ff6b5c"} icon="calendar" iconcolor="#ff6b5c" isbtn2={true}  handleTogglecontactForm={handleTogglecontactForm} />
+                <Button name={"Book Consultation"} isicon={true} txtcolor={"#ff6b5c"} icon="calendar" iconcolor="#ff6b5c" isbtn2={true}  handleTogglecontactForm={handleTogglecontactForm} />
             </div>
         </div>
     );

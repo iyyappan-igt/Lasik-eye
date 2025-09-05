@@ -5,12 +5,12 @@ const StatsSection = ({ data , handleTogglecontactForm }) => {
   return (
     <section>
       <div className="my-5 my-md-3">
-        <div className={`card ${styles.card} border-0 mx-auto p-3`} onClick={handleTogglecontactForm}>
-          <div className="d-flex flex-column flex-lg-row text-center w-100">
+        {/* <div className={`card ${styles.card} border-0 mx-auto p-3`} onClick={handleTogglecontactForm}>
+          <div className="d-flex flex-column pt-2 pt-lg-0 flex-lg-row text-center w-100">
             {data?.map((item, index) => (
               <div
                 key={index}
-                className={`mb-4 d-flex flex-column gap-1 my-lg-3 px-3 flex-fill ${styles.statItem}`}
+                className={`${index == data.length-1 ? "mb-0" : "mb-4 "} d-flex flex-column gap-1 my-lg-3 px-3 flex-fill ${styles.statItem}`}
               >
                 <h2 className="fw-bold fs-2" style={{ color: "#3c7c6f" }}>
                   {item?.value}
@@ -18,11 +18,10 @@ const StatsSection = ({ data , handleTogglecontactForm }) => {
                 <h2 className="fw-bold fs-6" style={{ color: "#3c7c6f" }}>
                   {item?.title}
                 </h2>
-                {/* <p className="mb-0">{item?.description}</p> */}
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         <SubBanner
           title={"Check"}
@@ -37,6 +36,10 @@ const StatsSection = ({ data , handleTogglecontactForm }) => {
           isicons={false}
           isimg={true}
           btn_img={"/assets/whatsapp.png"}
+          img={"/assets/surgeryCost.png"}
+          imgwidth={250}
+          imgheight={250}
+          scale={1.1}
           handleTogglecontactForm={handleTogglecontactForm}
         />
       </div>

@@ -28,6 +28,10 @@ const AfterSurgery = ({ surgerydata, handleTogglecontactForm }) => {
         btn_txtcolor={"#fff"}
         isicons={false}
         isimg={false}
+         img={"/assets/simplifiedAi.png"}
+          imgheight={250}
+          imgwidth={250}
+          scale={1.2}
         handleTogglecontactForm={handleTogglecontactForm}
       />
     </section>

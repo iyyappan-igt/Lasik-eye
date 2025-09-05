@@ -26,15 +26,19 @@ const TopDoctor = ({ data, handleTogglecontactForm }) => {
           title={"Now"}
           spantitle={"Consult the doctor"}
           content={
-            "Get a FREE consultation from our top doctors to know the best course of treatment."
+            "Get a consultation from our top doctors to know the best course of treatment."
           }
           btn_name={"WhatsApp To Consult Doctor"}
           btn_txtcolor={"#fff"}
           bgcolor="#E0FAF4"
-          spancolor="#3C7C6F"
-          bordercolor="#3C7C6F"
-          btn_bgcolor="#3C7C6F"
-          handleTogglecontactForm={handleTogglecontactForm}
+          spancolor="#21a179"
+          bordercolor="#21a179"
+          btn_bgcolor="#21a179"
+          img={"/assets/consultDoctor.png"}
+          imgheight={250}
+          href="https://wa.me/917075008561"
+          imgwidth={250}
+          scale={1.4}
         />
       </div>
     </section>

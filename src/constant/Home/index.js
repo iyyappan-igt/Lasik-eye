@@ -13,16 +13,19 @@ export const HomeData = {
       value: "15+",
       title: "Years of Experience",
       description: "Excellence in eye care",
+      color:"#FF914D"
     },
     {
       value: "2000+",
       title: "Successful LASIK Procedures",
       description: "Proven results",
+      color:"#4F9BCF"
     },
     {
       value: "98%",
       title: "Patient Satisfaction Rate",
       description: "Happy, glasses-free lives",
+      color:"#63D35D"
     },
   ],
   checkSurgery: {
@@ -79,7 +82,7 @@ export const HomeData = {
   consultDoctor: {
     title: "Now Consult the doctor",
     description:
-      "Get a FREE consultation from our top doctors to know the best course of treatment.",
+      "Get a  consultation from our top doctors to know the best course of treatment.",
     buttontxt: "WhatsApp To Consult Doctor",
     img: "",
   },

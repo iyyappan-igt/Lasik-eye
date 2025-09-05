@@ -1,6 +1,7 @@
 import Form from "@/common/Form";
 import Header from "@/common/Header";
 import { Popup } from "@/common/Popup";
+import QuickAction from "@/common/QuickAction";
 import AfterSurgery from "@/component/Home/AfterSurgery";
 import DelayRisk from "@/component/Home/DelayRisk";
 import FAQ from "@/component/Home/Faq";
@@ -13,40 +14,25 @@ import TreatmentCost from "@/component/Home/TreatmentCost";
 import WhyChoose from "@/component/Home/Whychoose";
 import { HomeData } from "@/constant/Home";
 import { useState } from "react";
+import styles from "./styles.module.css";
 
 const HomePageComponent = () => {
-  const [open, setopen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [formTitle, setFormTitle] = useState({title:"",subtitle:""}); // Store the form title
 
-  const handleTogglecontactForm = () => {
-    setopen(!open);
+  // Modified handleTogglecontactForm to accept a title
+  const handleTogglecontactForm = (title,subtitle) => {
+    console.log("Toggle fired with title:", title);
+    setFormTitle({title:title,subtitle:subtitle}); // Set the title for the form
+    setOpen(!open); // Toggle popup
   };
 
   return (
     <>
-      {/* <div className="container">
-        <div className="col-lg-8">
-          <TreatmentCost
-            treatmentlist={HomeData?.treatmentData}
-            handleTogglecontactForm={handleTogglecontactForm}
-          />
-          <WhyChoose
-            chooselist={HomeData?.whychoose}
-            handleTogglecontactForm={handleTogglecontactForm}
-          />
-          <PatientSay handleTogglecontactForm={handleTogglecontactForm} />
-          <AfterSurgery
-            surgerydata={HomeData?.after_surgery}
-            handleTogglecontactForm={handleTogglecontactForm}
-          />
-          <FAQ faqlist={HomeData?.Faq} />
-        </div>
-        <div className="col-lg-5"></div>
-      </div> */}
-
-      <div className="p-0">
+      <div className="p-0 position-relative">
         <Header />
-        <HomeBanner data={HomeData?.banner} />
-        <div className="container">
+        <HomeBanner data={HomeData?.banner} statsData={HomeData?.stats} />
+        <div className={`${styles.container} container`}>
           <div className="row">
             <div className="col-12 mx-auto col-lg-8 order-2 order-lg-1">
               <StatsSection
@@ -74,19 +60,23 @@ const HomePageComponent = () => {
                 surgerydata={HomeData?.after_surgery}
                 handleTogglecontactForm={handleTogglecontactForm}
               />
-              <FAQ faqlist={HomeData?.Faq} />
+              <FAQ faqlist={HomeData?.Faq} handleTogglecontactForm={handleTogglecontactForm} />
             </div>
             <div className="col-12 col-lg-4 order-1 order-lg-2">
-              <div className="position-sticky" style={{ top: "20px" }}>
+              <div className={styles.rightSticky}>
                 <RightSticky />
               </div>
             </div>
           </div>
         </div>
+        <QuickAction handleTogglecontactForm={handleTogglecontactForm} />
       </div>
 
-      <Popup open={open} onClose={handleTogglecontactForm}>
-        <Form handleTogglecontactForm={handleTogglecontactForm} />
+      <Popup open={open} onClose={() => handleTogglecontactForm()}>
+        <Form
+          handleTogglecontactForm={handleTogglecontactForm}
+          title={formTitle}
+        />
       </Popup>
     </>
   );

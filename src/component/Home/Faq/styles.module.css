@@ -26,8 +26,8 @@
 
 }
 
-.footercta button {
-    width: 100%;
+.footercta a,.footercta button {
+    width: 100% !important;
 }
 
 
@@ -47,6 +47,18 @@
     }
 
 
+}
+
+@media(width < 768px){
+      .stablediv {
+        position: fixed;
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.10);
+    }
 }
 
 @media (width < 576px) {

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
-import Button from "../button";
+import Button from "@/common/Button";
 
 const Header = () => {
   return (
@@ -19,23 +19,23 @@ const Header = () => {
           <div className="d-none d-md-flex gap-3">
             <Button
               isicon={true}
-              href={"tel:+919355533019"}
-              name="Call 9355533019"
+              href={"tel:+917075008561"}
+              name="Call 7075008561"
               bgcolor="#ff6f61"
               txtcolor="#fff"
               icon={"phone"}
               iconcolor={"#ffff"}
             />
             <Button
-              href={"https://wa.re/919355533019"}
+              href={"https://wa.me/917075008561"}
               name="Chat on WhatsApp"
-              bgcolor="#3c7c6f"
+              bgcolor="#21a179"
               txtcolor="#fff"
               imgicon={"/assets/whatsapp.png"}
               isimg={true}
             />
           </div>
-          <div className="d-flex d-md-none gap-3">
+          <div className="d-flex d-md-none gap-0">
             <Button
               isicon={true}
               href={"tel:+919355533019"}
@@ -46,9 +46,9 @@ const Header = () => {
               iconcolor={"#ffff"}
             />
             <Button
-              href={"https://wa.re/919355533019"}
+              href={"https://wa.me/919355533019"}
               name=""
-              bgcolor="#3c7c6f"
+              bgcolor="#21a179"
               txtcolor="#fff"
               imgicon={"/assets/whatsapp.png"}
               isimg={true}

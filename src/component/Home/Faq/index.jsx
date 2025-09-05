@@ -3,8 +3,16 @@ import styles from "./styles.module.css";
 import SubBanner from "@/common/SubBanner";
 import Image from "next/image";
 import Button from "@/common/Button";
+import { useEffect, useState } from "react";
+import { DynamicIcon } from "lucide-react/dynamic";
 
-const FAQ = ({ faqlist }) => {
+const FAQ = ({ faqlist,handleTogglecontactForm }) => {
+  const [stable, setStable] = useState(false);
+
+  useEffect(() => {
+    setStable(true)
+  }, [])
+
   return (
     <section className={styles.faqsec}>
       <div>
@@ -51,7 +59,7 @@ const FAQ = ({ faqlist }) => {
 
         <SubBanner
           title={"Find Out If"}
-          spantitle={"LASIK is Right for You "}
+          spantitle={"LASIK is Right for You"}
           content={
             "Take our quick eligibility check to know which LASIK procedure suits your eyes best."
           }
@@ -60,6 +68,12 @@ const FAQ = ({ faqlist }) => {
           bordercolor={"#2f74b1"}
           btn_bgcolor={"#2f74b1"}
           btn_name={" Check Eligibility Now"}
+          img={"/assets/fitforyou.png"}
+          imgheight={250}
+          imgwidth={250}
+          handleTogglecontactForm={handleTogglecontactForm}
+          scale={1.6}
+          height={"210px"}
           btn_txtcolor={"#fff"}
           isicons={false}
           isimg={false}
@@ -69,7 +83,8 @@ const FAQ = ({ faqlist }) => {
           className={`${styles.footercta} d-flex justify-content-center gap-3`}
         >
           <Button
-            name={"Call 935553085 "}
+            href={"tel:+917075008561"}
+            name={"Call 7075008561"}
             bgcolor={"#ff6f61"}
             txtcolor={"#ffff"}
             isicon={true}
@@ -77,26 +92,7 @@ const FAQ = ({ faqlist }) => {
             iconcolor={"#fff"}
           />
           <Button
-            name={"Chat on Whatsapp "}
-            bgcolor={"#21a179"}
-            txtcolor={"#ffff"}
-            isimg={true}
-            imgicon={"/assets/whatsapp.png"}
-          />
-        </div>
-
-        <div
-          className={`${styles.footerctastable} d-flex  justify-content-center gap-3`}
-        >
-          <Button
-            name={"Call 935553085 "}
-            bgcolor={"#ff6f61"}
-            txtcolor={"#ffff"}
-            isicon={true}
-            icon={"phone"}
-            iconcolor={"#fff"}
-          />
-          <Button
+            href={"https://wa.me/917075008561"}
             name={"Chat on Whatsapp "}
             bgcolor={"#21a179"}
             txtcolor={"#ffff"}
