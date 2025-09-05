@@ -3,7 +3,7 @@ import styles from "./styles.module.css"
 
 const HomeBanner = ({ data,statsData }) => {
     return (
-        <div className="containermd--fluid" style={{ backgroundColor: '#f0fcff' }}>
+        <div className="container-md-fluid" style={{ backgroundColor: '#f0fcff' }}>
             <div className={`${styles.container} d-flex justify-content-center align-items-end w-100`}>
                 <div className="w-100 d-flex gap-5 align-items-end flex-column flex-lg-row">
                     <div className="d-flex w-100 justify-content-end pb-4 flex-column mb-4 px-4 px-md-0 mb-md-0">
