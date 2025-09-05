@@ -14,7 +14,8 @@ const Button = ({
   isbtn2,
   isbtn3,
   href,
-  handleTogglecontactForm
+  handleTogglecontactForm,
+  disabled
 }) => {
   return href ? (
     <a
@@ -24,30 +25,32 @@ const Button = ({
       className={`btn text-decoration-none`}
     >
       <button
-       onClick={href ? undefined : handleTogglecontactForm}
+        onClick={href ? undefined : handleTogglecontactForm}
         className={`btn text-center d-flex align-items-center justify-content-center gap-2 ${styles.button} ${!name ? "rounded-circle" : ""}  w-100 h-100`}
         style={{ backgroundColor: bgcolor, color: txtcolor }}
+        disabled={disabled}
       >
         {isicon && <DynamicIcon name={icon} color={iconcolor} />}
         {isimg && imgicon && (
           <Image src={imgicon} width={20} height={20} alt={`${name}-icon`} />
         )}
-       {name && <h6 className="m-0">{name}</h6>}
+        {name && <h6 className="m-0">{name}</h6>}
       </button>
     </a>
   ) : isbtn3 ? (
-     <button
+    <button
       className={`btn text-center d-flex align-items-center justify-content-center gap-2 ${styles.button}`}
       onClick={handleTogglecontactForm}
       style={{ backgroundColor: bgcolor, color: txtcolor }}
+      disabled={disabled}
     >
-     {name && <h6 className="m-0">{name}</h6>}
-     {isicon && <DynamicIcon name={icon} color={iconcolor} />}
+      {name && <h6 className="m-0">{name}</h6>}
+      {isicon && <DynamicIcon name={icon} color={iconcolor} />}
       {isimg && imgicon && (
         <Image src={imgicon} width={20} height={20} alt={`${name}-icon`} />
       )}
     </button>
-  ): isbtn2 ? (
+  ) : isbtn2 ? (
     <button
       className={`btn ${styles.button2} gap-2 d-flex flex-row align-items-center justify-content-center p-2 p-lg-3   fw-bold`}
       onClick={handleTogglecontactForm}
@@ -57,23 +60,25 @@ const Button = ({
         color: "#ff6b5c",
         background: "transparent",
       }}
+      disabled={disabled}
     >
       {isicon && <DynamicIcon name={icon} color={iconcolor} />}
       {isimg && imgicon && (
         <Image src={imgicon} width={20} height={20} alt={`${name}-icon`} />
-      )}{name && <h6 style={{marginBottom:"0"}}>{name}</h6>}
+      )}{name && <h6 style={{ marginBottom: "0" }}>{name}</h6>}
     </button>
   ) : (
     <button
       className={`btn text-center d-flex align-items-center justify-content-center gap-2 ${styles.button}`}
       onClick={handleTogglecontactForm}
       style={{ backgroundColor: bgcolor, color: txtcolor }}
+      disabled={disabled}
     >
       {isicon && <DynamicIcon name={icon} color={iconcolor} />}
       {isimg && imgicon && (
         <Image src={imgicon} width={20} height={20} alt={`${name}-icon`} />
       )}
-     {name && <h6 className="m-0">{name}</h6>}
+      {name && <h6 className="m-0">{name}</h6>}
     </button>
   );
 };

@@ -41,7 +41,7 @@ const PatientSay = ({handleTogglecontactForm}) => {
             icon={"calendar"}
             iconcolor={"#fff"}
             bgcolor={"#21a179"}
-            handleTogglecontactForm={handleTogglecontactForm}
+            handleTogglecontactForm={()=>handleTogglecontactForm("Book Appoinment")}
           />
         </div>
       </div>

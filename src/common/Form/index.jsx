@@ -1,40 +1,59 @@
 import Button from "@/common/Button";
 import React, { useState } from "react";
 import styles from "./styles.module.css";
+import { useRouter } from "next/router";
 
 const Form = ({ handleTogglecontactForm, title }) => {
-const reason = `${title.title} ${title.subtitle}`.replace(/\+/g, " ");
-console.log(reason); // "Check Surgery Cost";
-     const [formData, setFormData] = useState({
-      PatientName: "",
-      MobileNumber: "",
-      Reason: reason,
+  const router = useRouter();
+  console.log(title)
+  const reason = `${title?.title || title || ""} ${title?.subtitle || ""}`.trim().replace(/\+/g, " ");
+
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    PatientName: "",
+    MobileNumber: "",
+    Reason: reason,
+  });
+  const [error, setError] = useState("");
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
     });
-  
-    const handleChange = (e) => {
-      setFormData({
-        ...formData,
-        [e.target.name]: e.target.value,
-      });
-    };
-      const handleSubmit = async (e) => {
-      e.preventDefault();
-      try {
-        const response = await fetch(
-          "https://script.google.com/macros/s/AKfycbzc8qwuvrMntiluhmEX1TliwruyAElp5QTfj410ZrE3hBOfJVAYpTJQAXGEE0rmKKyS/exec",
-          {
-            method: "POST",
-            mode: "no-cors",
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-            },
-            body: new URLSearchParams(formData).toString(),
-          }
-        );
-      } catch (error) {
-        console.error(error);
-      }
-    };
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!formData.MobileNumber) {
+      setError("Mobile number is required.");
+      return;
+    }
+    const phoneRegex = /^[6-9]\d{9}$/;
+    if (!phoneRegex.test(formData.MobileNumber)) {
+      setError("Enter a valid 10-digit mobile number.");
+      return;
+    }
+    try {
+      setLoading(true);
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbzc8qwuvrMntiluhmEX1TliwruyAElp5QTfj410ZrE3hBOfJVAYpTJQAXGEE0rmKKyS/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams(formData).toString(),
+        }
+      );
+      setLoading(false);
+      router.push("/thank-you")
+    } catch (error) {
+      console.error(error);
+      setLoading(false);
+      setError("Something went wrong. Please try again.");
+    }
+  };
   const getFormContent = (title) => {
     if (title.title === "Check" && title.subtitle === "Surgery Cost") {
       return {
@@ -48,7 +67,7 @@ console.log(reason); // "Check Surgery Cost";
         fields: { nameField: true, numberField: true },
       };
     }
-       if (title.title === "Your Health," && title.subtitle === "Simplified By AI") {
+    if (title.title === "Your Health," && title.subtitle === "Simplified By AI") {
       return {
         heading: "Book Consultation",
         fields: { nameField: true, numberField: true },
@@ -111,7 +130,7 @@ console.log(reason); // "Check Surgery Cost";
               +91
             </span>
             <input
-            name="MobileNumber"
+              name="MobileNumber"
               type="tel"
               onChange={handleChange}
               className="form-control border-start-0 rounded-end-3"
@@ -120,10 +139,10 @@ console.log(reason); // "Check Surgery Cost";
             />
           </div>
         )}
-
+        {error && <p className="mt-2" style={{ color: "#ff6f61" }}>{error}</p>}
         <div className="d-grid mt-4">
           <Button
-            name="Book Now"
+            disabled={loading} name={loading ? "Booking..." : "Book Now"}
             bgcolor="#ff6f61"
             txtcolor="#fff"
           />
