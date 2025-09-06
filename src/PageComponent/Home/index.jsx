@@ -21,7 +21,7 @@ const HomePageComponent = () => {
   const [formTitle, setFormTitle] = useState({title:"",subtitle:""}); 
   const handleTogglecontactForm = (title,subtitle) => {
     setFormTitle({title:title,subtitle:subtitle});
-    setOpen(!open); p
+    setOpen(!open);
   };
 
   return (

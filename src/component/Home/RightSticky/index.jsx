@@ -32,7 +32,7 @@ const RightSticky = () => {
     try {
       setLoading(true)
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbzc8qwuvrMntiluhmEX1TliwruyAElp5QTfj410ZrE3hBOfJVAYpTJQAXGEE0rmKKyS/exec",
+        "https://script.google.com/macros/s/AKfycbxIZyzkHJEBeCijMG1VQ-YUCqlL-mF9kRwyX6jo8SiSx1O0eNqLX6ODF2TsuqNvBrcN/exec",
         {
           method: "POST",
           mode: "no-cors",
