@@ -1,5 +1,4 @@
 .button {
-    padding: 15px 25px !important;
     border-radius: 50px;
     cursor: pointer;
 }
@@ -26,4 +25,10 @@
         font-size: 15px !important;
     }
 
+}
+
+@media (width<390px){
+    .button{
+        padding: 15px 25px !important;
+    }
 }

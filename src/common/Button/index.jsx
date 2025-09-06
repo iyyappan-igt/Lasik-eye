@@ -26,8 +26,8 @@ const Button = ({
     >
       <button
         onClick={href ? undefined : handleTogglecontactForm}
-        className={`btn text-center d-flex align-items-center justify-content-center gap-2 ${styles.button} ${!name ? "rounded-circle" : ""}  w-100 h-100`}
-        style={{ backgroundColor: bgcolor, color: txtcolor }}
+        className={`btn text-center d-flex align-items-center justify-content-center gap-2 ${styles.button} ${!name ? "rounded-circle " : ""} w-100 h-100`}
+        style={{ backgroundColor: bgcolor, color: txtcolor,padding:!name ? "15px 20px" : "15px 25px" }}
         disabled={disabled}
       >
         {isbtn3 ? <>{name && <h6 className="m-0">{name}</h6>} {isicon && <DynamicIcon name={icon} color={iconcolor} />}
@@ -45,7 +45,7 @@ const Button = ({
     <button
       className={`btn text-center d-flex align-items-center justify-cont ent-center gap-2 ${styles.button}`}
       onClick={handleTogglecontactForm}
-      style={{ backgroundColor: bgcolor, color: txtcolor }}
+      style={{ backgroundColor: bgcolor, color: txtcolor,padding:!name ? "15px 20px" : "15px 25px"  }}
       disabled={disabled}
     >
       {name && <h6 className="m-0">{name}</h6>}
@@ -63,6 +63,7 @@ const Button = ({
         border: "2px solid #ff6b5c",
         color: "#ff6b5c",
         background: "transparent",
+        padding:!name ? "15px 20px" : "15px 25px" 
       }}
       disabled={disabled}
     >
@@ -75,7 +76,7 @@ const Button = ({
     <button
       className={`btn text-center d-flex align-items-center justify-content-center gap-2 ${styles.button}`}
       onClick={handleTogglecontactForm}
-      style={{ backgroundColor: bgcolor, color: txtcolor }}
+      style={{ backgroundColor: bgcolor, color: txtcolor,padding:!name ? "15px 20px" : "15px 25px"  }}
       disabled={disabled}
     >
       {isicon && <DynamicIcon name={icon} color={iconcolor} />}

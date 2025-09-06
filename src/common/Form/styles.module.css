@@ -15,3 +15,9 @@
      max-width: 100%;
 }
 }
+
+@media (width<576px) {
+    .card{
+         min-width: unset !important;
+    }
+}
