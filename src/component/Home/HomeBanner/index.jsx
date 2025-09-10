@@ -41,9 +41,9 @@ const HomeBanner = ({ data,statsData }) => {
 
                     <div className="mt-0 w-100 d-flex justify-content-center">
                             <Image
-                                src="/assets/bannerImage1.png"
+                                src="/assets/bannerImage.jpg"
                                 alt="Banner"
-                                width={600}
+                                width={530}
                                 height={540}
                                 style={{
                                     objectFit: 'cover',

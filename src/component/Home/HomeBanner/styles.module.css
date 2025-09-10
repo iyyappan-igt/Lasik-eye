@@ -7,7 +7,7 @@
       min-height: 550px;
     height:auto;
     max-width: 1500px;
-  padding: 3.5rem 3rem 0rem;
+  padding: 3.5rem 3rem;
 }
 .imgContainer {
   width: 90%;
@@ -82,6 +82,10 @@
   color: #495057;
 }
 
+.bannerimage{
+  border-radius: 20px;
+}
+
 @media (max-width: 768px) {
   .banner-container {
     margin: 0 15px;
@@ -92,7 +96,7 @@
   .container {
      min-height: 550px;
     height:auto;
-    padding: 2.5rem 3rem 0rem;
+    padding: 2.5rem 3rem;
   }
   .imgContainer {
     height: 450px;
@@ -112,7 +116,7 @@
   .container {
     min-height: 550px;
     height:auto;
-    padding: 1.5rem 1rem 0;
+    padding: 1.5rem 1rem;
   }
   .imgContainer {
     height: 450px;
@@ -134,7 +138,7 @@
 @media (max-width: 992px) {
   .container {
     min-height: 550px;
-    padding: 3rem 2rem 0;
+    padding: 3rem 2rem;
   }
   .imgContainer {
     width: 100%;
@@ -169,7 +173,7 @@
 @media (max-width: 768px) {
   .container {
     height: auto;
-    padding: 3rem 0rem 0;
+    padding: 3rem 0rem;
   }
   .title {
     width: 90%;
