@@ -94,8 +94,11 @@
 }
 
 @media (max-width: 768px) {
-  .imgContainer {
-    width: 130px;
+    .imgContainer {
+    width: 50%;
+  }
+  .imageContainer img{
+      width: 130px;
     height: 55px;
   }
   .call, .whatsapp {
@@ -104,6 +107,15 @@
     text-align: center;
     margin-bottom: 10px;
   }
+      .buttonGroup{
+        width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .buttonGroup a{
+    width: 100%;
+    max-width: 250px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -111,7 +123,14 @@
     padding: 0.8rem;
     border-radius: 8px;
   }
-  .imgContainer {
+      .imgContainer {
+    width: 32%;
+  }
+  .imageContainer img{
+      width: 130px;
+    height: 55px;
+  }
+  .imgContainer img {
     min-width: 90px;
     min-height: 45px;
   }
@@ -119,14 +138,34 @@
     font-size: 0.85rem;
     padding: 10px 24px;
   }
+      .buttonGroup{
+        width: 68%;
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+  }
+  .buttonGroup a{
+    width: 100%;
+  }
 }
 
 @media (max-width:450px){
-  .imgContainer {
-    width: 70px;
-    height: 70px;
+  .imgContainer{
+    width: 30%;
+  }
+  .imgContainer img {
+    width: 120px;
+    height: 120px;
   }
   .headerContainer{
     padding: 0 !important;
+  }
+       .buttonGroup{
+        width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .buttonGroup a{
+    width: 100%;
   }
 }

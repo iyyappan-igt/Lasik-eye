@@ -16,7 +16,7 @@ const Header = () => {
               className={styles.logo}
             />
           </div>
-          <div className="d-none d-md-flex gap-3">
+          <div className={`${styles.buttonGroup} d-flex gap-1 gap-md-3`}>
             <Button
               isicon={true}
               href={"tel:+917075008561"}
@@ -35,7 +35,7 @@ const Header = () => {
               isimg={true}
             />
           </div>
-          <div className="d-flex d-md-none gap-0">
+          {/* <div className="d-flex d-md-none gap-0">
             <Button
               isicon={true}
               href={"tel:+919355533019"}
@@ -53,7 +53,7 @@ const Header = () => {
               imgicon={"/assets/whatsapp.png"}
               isimg={true}
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </header>
