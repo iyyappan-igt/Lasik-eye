@@ -110,6 +110,7 @@
       .buttonGroup{
         width: 50%;
     display: flex;
+        justify-content: end;
     flex-wrap: wrap;
   }
   .buttonGroup a{
