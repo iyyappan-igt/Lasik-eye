@@ -50,7 +50,7 @@ const FAQ = ({ faqlist,handleTogglecontactForm }) => {
                     height={20}
                     alt="logo"
                   />
-                  <h6 className="m-0">Chat on whatsapp</h6>
+                  <a target="_blank" href="https://wa.me/917075008561"><h6 className="m-0">Chat on whatsapp</h6></a>
                 </div>
               </div>
             </div>

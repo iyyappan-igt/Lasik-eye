@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
 import Button from "@/common/Button";
+import emailjs from "emailjs-com";
 import { useRouter } from "next/router";
 
 const RightSticky = () => {
@@ -42,6 +43,20 @@ const RightSticky = () => {
           body: new URLSearchParams(formData).toString(),
         }
       );
+
+       await emailjs.send(
+      "service_wy9rlgc",
+      "template_gr9dlqd",
+      {
+        patient_name: formData.PatientName || "Guest Patient",
+        mobile_number: formData.MobileNumber,
+        service_name: "Lasik Eye Surgery",
+        email_subject:"Lasik Eye Care",
+        from_name:"Pixel Eye Hospitals",
+        from_email : "info@pixeleyehospitals.com"
+      },
+      "4yBxE-kzbe7EuZqFh"
+    );
       setLoading(false);
       router.push("/thank-you");
     } catch (error) {

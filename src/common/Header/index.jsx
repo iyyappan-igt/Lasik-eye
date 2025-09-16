@@ -10,11 +10,13 @@ const Header = () => {
           className={`${styles.headerContainer} d-flex container-md px-3 mx-md-0 justify-content-between align-items-center`}
         >
           <div className={`${styles.imgContainer} d-flex align-items-center`}>
-            <img
-              src="/assets/pixel_logo.png"
-              alt="HexaHealth Logo"
-              className={styles.logo}
-            />
+            <a href="https://www.pixeleyehospitals.com/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/assets/pixel_logo.png"
+                alt="Pixel Eye Hospitals Logo"
+                className={styles.logo}
+              />
+            </a>
           </div>
           <div className={`${styles.buttonGroup} d-flex gap-1 gap-md-3`}>
             <Button
