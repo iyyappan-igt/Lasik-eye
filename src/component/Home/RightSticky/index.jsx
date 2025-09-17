@@ -31,32 +31,40 @@ const RightSticky = () => {
       return;
     }
     try {
-      setLoading(true)
+      setLoading(true);
+      const ipResponse = await fetch("https://api.ipify.org?format=json");
+      const ipData = await ipResponse.json();
+      console.log(ipData);
+      const newFormData = {
+        PatientName: formData?.PatientName,
+        MobileNumber: formData.MobileNumber,
+        IP_Address: ipData.ip
+      }
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxIZyzkHJEBeCijMG1VQ-YUCqlL-mF9kRwyX6jo8SiSx1O0eNqLX6ODF2TsuqNvBrcN/exec",
+        "https://script.google.com/macros/s/AKfycbx87-_xlsI93eMs9b1kzsoApfTMtrrMDZsFA0jE2q6a47_Wf-oArzRgaZrjqm3_jNrB/exec",
         {
           method: "POST",
           mode: "no-cors",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
           },
-          body: new URLSearchParams(formData).toString(),
+          body: new URLSearchParams(newFormData).toString(),
         }
       );
 
-       await emailjs.send(
-      "service_wy9rlgc",
-      "template_gr9dlqd",
-      {
-        patient_name: formData.PatientName || "Guest Patient",
-        mobile_number: formData.MobileNumber,
-        service_name: "Lasik Eye Surgery",
-        email_subject:"Lasik Eye Care",
-        from_name:"Pixel Eye Hospitals",
-        from_email : "info@pixeleyehospitals.com"
-      },
-      "4yBxE-kzbe7EuZqFh"
-    );
+      await emailjs.send(
+        "service_wy9rlgc",
+        "template_gr9dlqd",
+        {
+          patient_name: formData.PatientName || "Guest Patient",
+          mobile_number: formData.MobileNumber,
+          service_name: "Lasik Eye Surgery",
+          email_subject: "Lasik Eye Care",
+          from_name: "Pixel Eye Hospitals",
+          from_email: "info@pixeleyehospitals.com"
+        },
+        "4yBxE-kzbe7EuZqFh"
+      );
       setLoading(false);
       router.push("/thank-you");
     } catch (error) {

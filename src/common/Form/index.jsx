@@ -32,15 +32,22 @@ const Form = ({ handleTogglecontactForm, title }) => {
     }
     try {
       setLoading(true);
+      const ipResponse = await fetch("https://api.ipify.org?format=json");
+      const ipData = await ipResponse.json();
+      const newFormData = {
+        PatientName: formData?.PatientName,
+        MobileNumber: formData.MobileNumber,
+        IP_Address: ipData.ip
+      }
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbxIZyzkHJEBeCijMG1VQ-YUCqlL-mF9kRwyX6jo8SiSx1O0eNqLX6ODF2TsuqNvBrcN/exec",
+        "https://script.google.com/macros/s/AKfycbx87-_xlsI93eMs9b1kzsoApfTMtrrMDZsFA0jE2q6a47_Wf-oArzRgaZrjqm3_jNrB/exec",
         {
           method: "POST",
           mode: "no-cors",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
           },
-          body: new URLSearchParams(formData).toString(),
+          body: new URLSearchParams(newFormData).toString(),
         }
       );
 
