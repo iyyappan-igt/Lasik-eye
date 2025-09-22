@@ -38,10 +38,11 @@ const RightSticky = () => {
       const newFormData = {
         PatientName: formData?.PatientName,
         MobileNumber: formData.MobileNumber,
-        IP_Address: ipData.ip
+        IP_Address: ipData.ip,
+        utm_source: localStorage.getItem("utm_source"),
       }
       const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbx87-_xlsI93eMs9b1kzsoApfTMtrrMDZsFA0jE2q6a47_Wf-oArzRgaZrjqm3_jNrB/exec",
+        "https://script.google.com/macros/s/AKfycby7HrLM2fJWsnuH8ltC5NK0Jrl-XP6rndAjZ7oF9lApuTcXmqAfRvYPKAUpV6EYy42W/exec",
         {
           method: "POST",
           mode: "no-cors",
