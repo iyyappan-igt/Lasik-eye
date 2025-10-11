@@ -35,11 +35,37 @@ const RightSticky = () => {
       const ipResponse = await fetch("https://api.ipify.org?format=json");
       const ipData = await ipResponse.json();
       console.log(ipData);
+
+      const registerFormData = {
+        name: formData?.PatientName,
+        mobile: formData.MobileNumber,
+        ip_address: ipData.ip,
+        utm_source: localStorage.getItem("utm_source"),
+        page_name: "lasik",
+      }
+
+      const registerResponse = await fetch(
+        "https://stageapi.invictusglobaltech.com/api/v1/pixel-eye",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams(registerFormData).toString(),
+        }
+      );
+
+      if (!registerResponse.ok) {
+        setError("Something went wrong. Please try again.");
+        setLoading(false);
+        return;
+      }
       const newFormData = {
         PatientName: formData?.PatientName,
         MobileNumber: formData.MobileNumber,
         IP_Address: ipData.ip,
         utm_source: localStorage.getItem("utm_source"),
+        page_name: "lasik",
       }
       const response = await fetch(
         "https://script.google.com/macros/s/AKfycby7HrLM2fJWsnuH8ltC5NK0Jrl-XP6rndAjZ7oF9lApuTcXmqAfRvYPKAUpV6EYy42W/exec",

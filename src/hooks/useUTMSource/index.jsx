@@ -20,7 +20,6 @@ export default function useUTMSource() {
         }
       }
     } catch (error) {
-      console.error("Error capturing utm_source:", error);
       localStorage.setItem("utm_source", "direct");
     }
   }, []);
