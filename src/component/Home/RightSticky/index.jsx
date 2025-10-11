@@ -65,7 +65,6 @@ const RightSticky = () => {
         MobileNumber: formData.MobileNumber,
         IP_Address: ipData.ip,
         utm_source: localStorage.getItem("utm_source"),
-        page_name: "lasik",
       }
       const response = await fetch(
         "https://script.google.com/macros/s/AKfycby7HrLM2fJWsnuH8ltC5NK0Jrl-XP6rndAjZ7oF9lApuTcXmqAfRvYPKAUpV6EYy42W/exec",

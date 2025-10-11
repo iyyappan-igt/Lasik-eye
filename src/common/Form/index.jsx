@@ -64,7 +64,6 @@ const Form = ({ handleTogglecontactForm, title }) => {
         MobileNumber: formData.MobileNumber,
         IP_Address: ipData.ip,
         utm_source: localStorage.getItem("utm_source"),
-        page_name: "lasik",
       }
 
       const response = await fetch(
