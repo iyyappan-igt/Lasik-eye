@@ -40,6 +40,7 @@ const PatientSay = ({ handleTogglecontactForm }) => {
   ];
 
   var settings = {
+    
     dots: false,
     infinite: true,
     arrows: true,
